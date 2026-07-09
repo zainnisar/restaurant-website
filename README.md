@@ -1,5 +1,7 @@
 # Guildford Mina Pizzeria — Website
 
+**Live site:** https://mina-pizzeria.netlify.app/
+
 A single-page marketing site for **Guildford Mina Pizzeria**, 316 Railway Terrace, Guildford NSW 2161 — open 24 hours, 7 days a week.
 
 Built as a static HTML/CSS/JS site (no build step, no framework) with a premium, "Awwwards-style" motion layer on top: a branded preloader, GSAP-driven scroll reveals, split-text headline animation, subtle parallax, magnetic buttons, and buttery-smooth scrolling via Lenis.
@@ -120,7 +122,7 @@ Everything lives in `index.html`. No CMS, no data files — content is plain HTM
 
 ## Known Limitations / TODO
 
-- [ ] Replace `YOUR-DOMAIN-HERE.com` placeholders (see [Deployment](#deployment) above) once the real domain is chosen
+- [x] Replace `YOUR-DOMAIN-HERE.com` placeholders — now live at `mina-pizzeria.netlify.app`
 - [ ] The Google review snapshot was pulled at a point in time — refresh periodically so ratings/counts stay accurate
 - [ ] GSAP, Lenis, SplitType, and Google Fonts load from CDN — if offline-first support is ever needed, these would need to be self-hosted
 - [ ] No contact form or newsletter signup — phone, WhatsApp-free click-to-call, and the NextOrder link are the only conversion paths by design
