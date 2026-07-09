@@ -213,7 +213,10 @@
     font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;
     box-shadow:0 6px 16px rgba(193,68,14,0.4);
     white-space:nowrap;
+    opacity:0; pointer-events:none;
+    transition:opacity .3s ease;
   }
+  .mobile-order-fab.is-visible{ opacity:1; pointer-events:auto; }
   .mobile-order-fab svg{ width:13px; height:13px; flex-shrink:0; }
   .mobile-order-fab:active{ transform:translateX(-50%) scale(0.97); }
 
@@ -915,6 +918,16 @@
     links.style.cssText += open ? '' : 'position:absolute; top:76px; left:0; right:0; background:#FBF3E6; flex-direction:column; padding:20px 28px; border-bottom:1px solid rgba(43,32,20,0.15); gap:16px;';
     toggle.setAttribute('aria-expanded', String(!open));
   });
+
+  /* ===== MOBILE FLOATING ORDER BUTTON: show only after hero scrolls out of view ===== */
+  const fab = document.querySelector('.mobile-order-fab');
+  const hero = document.querySelector('.hero');
+  if (fab && hero && 'IntersectionObserver' in window) {
+    const heroObserver = new IntersectionObserver(([entry]) => {
+      fab.classList.toggle('is-visible', !entry.isIntersecting);
+    });
+    heroObserver.observe(hero);
+  }
 
   /* ===== MENU TABS (+ replay GSAP reveal on switch) ===== */
   const tabs   = document.querySelectorAll('.menu-tab');
