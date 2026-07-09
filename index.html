@@ -201,6 +201,22 @@
   .btn-outline:active{ transform:translateY(0); }
   .menu-toggle{ display:none; background:none; border:0; color:var(--red); font-size:26px; cursor:pointer; }
 
+  /* ---------- MOBILE FLOATING ORDER BUTTON ---------- */
+  .mobile-order-fab{
+    display:none;
+    position:fixed; left:50%; bottom:18px; transform:translateX(-50%);
+    bottom:calc(18px + env(safe-area-inset-bottom));
+    z-index:200;
+    align-items:center; gap:8px;
+    background:var(--red); color:var(--white);
+    padding:14px 26px; border-radius:30px;
+    font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+    box-shadow:0 8px 24px rgba(193,68,14,0.45);
+    white-space:nowrap;
+  }
+  .mobile-order-fab svg{ width:16px; height:16px; flex-shrink:0; }
+  .mobile-order-fab:active{ transform:translateX(-50%) scale(0.97); }
+
   /* ---------- HERO ---------- */
   .hero{
     position:relative; overflow:hidden;
@@ -488,7 +504,8 @@
     .testimonial-grid{ grid-template-columns:1fr; }
     .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:120px; }
     .foot-grid{ grid-template-columns:1fr; }
-    .nav-cta .btn-outline{ display:none; }
+    .nav-cta{ display:none; }
+    .mobile-order-fab{ display:inline-flex; }
   }
 </style>
 </head>
@@ -521,6 +538,11 @@
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
   </div>
 </header>
+
+<a href="https://guildford-mina-pizzeria.nextorder.com/" class="mobile-order-fab" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16l-1.5 10.5a2 2 0 01-2 1.5H7.5a2 2 0 01-2-1.5L4 6z" stroke="white" stroke-width="1.5"/><path d="M8 6V5a4 4 0 018 0v1" stroke="white" stroke-width="1.5"/></svg>
+  Order Now
+</a>
 
 <main id="top">
 
