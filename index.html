@@ -331,37 +331,43 @@
   }
   .deal-note{ text-align:center; font-size:13px; color:var(--cream-dim); margin-top:28px; }
 
-  /* ---------- GALLERY ---------- */
-  .gallery-grid{ display:grid; grid-template-columns:repeat(4, 1fr); grid-auto-rows:140px; gap:12px; }
-  .gallery-grid > div:nth-child(1){ grid-column:span 2; grid-row:span 2; }
-  .gallery-grid > div:nth-child(4){ grid-row:span 2; }
-  .g-tile{
+  /* ---------- GALLERY SLIDER ---------- */
+  .gallery-slider{
+    position:relative; width:100%; aspect-ratio:16/9;
     border-radius:var(--radius); border:1px solid var(--line);
-    background:var(--charcoal-2);
-    display:flex; align-items:center; justify-content:center; color:var(--orange); opacity:0.9;
-    transition:box-shadow .3s ease, border-color .3s ease, opacity .3s ease;
-    cursor:pointer;
-    overflow:hidden;
-    position:relative;
-    transform-style:preserve-3d; will-change:transform;
+    background:var(--charcoal-2); overflow:hidden;
+    box-shadow:0 16px 32px rgba(43,32,20,0.1);
   }
-  .g-tile:hover{
-    box-shadow:0 16px 32px rgba(43,32,20,0.14);
-    border-color:var(--orange); opacity:1;
+  .gallery-slide{
+    position:absolute; inset:0;
+    clip-path:inset(0 0 0 0);
+    transition:clip-path .9s cubic-bezier(.65,0,.35,1);
   }
-  .g-tile svg{ width:34%; height:34%; position:relative; z-index:1; }
-  .g-tile img{
-    width:100%; height:100%; object-fit:cover; display:block;
-    position:relative; z-index:1;
-  }
-  .tile-label{
-    position:absolute; bottom:0; left:0; right:0; z-index:2;
-    padding:12px 14px 10px;
+  .gallery-slide img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .gallery-slide .tile-label{
+    position:absolute; bottom:0; left:0; right:0;
+    padding:22px 26px 18px;
     background:linear-gradient(transparent, rgba(0,0,0,0.75));
-    font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
-    color:#fff; opacity:0; transition:opacity .3s ease;
+    font-size:13px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+    color:#fff;
   }
-  .g-tile:hover .tile-label{ opacity:1; }
+  .gallery-arrow{
+    position:absolute; top:50%; transform:translateY(-50%); z-index:10;
+    width:40px; height:40px; border-radius:50%;
+    background:rgba(255,253,248,0.92); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-size:20px; line-height:1; color:var(--ink); cursor:pointer;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .gallery-arrow:hover{ background:#fff; transform:translateY(-50%) scale(1.08); }
+  .gallery-arrow.prev{ left:14px; }
+  .gallery-arrow.next{ right:14px; }
+  .gallery-dots{ display:flex; justify-content:center; gap:8px; margin-top:18px; }
+  .gallery-dot{
+    width:8px; height:8px; border-radius:50%; background:var(--line); border:0; padding:0; cursor:pointer;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .gallery-dot.active{ background:var(--orange); transform:scale(1.3); }
   .gallery-note{ text-align:center; font-size:13px; color:var(--cream-dim); margin-top:24px; }
 
   /* ---------- ABOUT ---------- */
@@ -509,7 +515,7 @@
     .menu-grid{ grid-template-columns:1fr; }
     .deals-grid{ grid-template-columns:1fr; }
     .testimonial-grid{ grid-template-columns:1fr; }
-    .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:120px; }
+    .gallery-slider{ aspect-ratio:4/3; }
     .foot-grid{ grid-template-columns:1fr; }
     .nav-cta{ display:none; }
     .mobile-order-fab{ display:inline-flex; }
@@ -712,37 +718,48 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Gallery</div>
-        <h2>Fresh out of the oven.</h2>
+        <h2>Take a look inside.</h2>
       </div>
-      <div class="gallery-grid">
-        <div class="g-tile">
+      <div class="gallery-slider">
+        <div class="gallery-slide">
           <img src="images/gallery-loaded2.jpg" alt="Loaded pizza with ham, pepperoni and jalapeño" loading="lazy">
           <span class="tile-label">Loaded With Toppings</span>
         </div>
-        <div class="g-tile">
+        <div class="gallery-slide">
           <img src="images/gallery-manoush2.jpg" alt="Traditional folded Lebanese manoush" loading="lazy">
           <span class="tile-label">Lebanese Manoush</span>
         </div>
-        <div class="g-tile">
+        <div class="gallery-slide">
           <img src="images/gallery-pepperoni.jpg" alt="Classic pepperoni pizza" loading="lazy">
           <span class="tile-label">Classic Pepperoni</span>
         </div>
-        <div class="g-tile">
+        <div class="gallery-slide">
           <img src="images/gallery-interior.jpg" alt="Inside Guildford Mina Pizzeria, the counter and menu boards" loading="lazy">
           <span class="tile-label">Inside the Shop</span>
         </div>
-        <div class="g-tile">
+        <div class="gallery-slide">
           <img src="images/gallery-chicken.jpg" alt="Chicken Supreme pizza with capsicum and olives" loading="lazy">
           <span class="tile-label">Chicken Supreme</span>
         </div>
-        <div class="g-tile">
+        <div class="gallery-slide">
           <img src="images/gallery-veggie.jpg" alt="Vegetarian Deluxe pizza" loading="lazy">
           <span class="tile-label">Vegetarian Deluxe</span>
         </div>
-        <div class="g-tile">
+        <div class="gallery-slide">
           <img src="images/gallery-kibbeh.jpg" alt="Traditional Lebanese kibbeh" loading="lazy">
           <span class="tile-label">Traditional Kibbeh</span>
         </div>
+        <button class="gallery-arrow prev" aria-label="Previous photo">‹</button>
+        <button class="gallery-arrow next" aria-label="Next photo">›</button>
+      </div>
+      <div class="gallery-dots">
+        <button class="gallery-dot active" aria-label="Go to photo 1" aria-current="true"></button>
+        <button class="gallery-dot" aria-label="Go to photo 2"></button>
+        <button class="gallery-dot" aria-label="Go to photo 3"></button>
+        <button class="gallery-dot" aria-label="Go to photo 4"></button>
+        <button class="gallery-dot" aria-label="Go to photo 5"></button>
+        <button class="gallery-dot" aria-label="Go to photo 6"></button>
+        <button class="gallery-dot" aria-label="Go to photo 7"></button>
       </div>
       <p class="gallery-note">Real photos from our shop and our customers.</p>
     </div>
@@ -943,6 +960,52 @@
     heroObserver.observe(hero);
   }
 
+  /* ===== GALLERY WIPE SLIDER ===== */
+  (function initGallerySlider() {
+    const slider = document.querySelector('.gallery-slider');
+    if (!slider) return;
+    const slides = Array.from(slider.querySelectorAll('.gallery-slide'));
+    const dots   = Array.from(document.querySelectorAll('.gallery-dot'));
+    const prevBtn = slider.querySelector('.gallery-arrow.prev');
+    const nextBtn = slider.querySelector('.gallery-arrow.next');
+    if (!slides.length) return;
+
+    let current = 0;
+    let zCounter = 1;
+    slides.forEach((s, i) => { s.style.zIndex = i === 0 ? String(zCounter) : '0'; });
+
+    function goTo(index, dir) {
+      if (index === current) return;
+      const incoming = slides[index];
+      incoming.style.zIndex = String(++zCounter);
+      incoming.style.transition = 'none';
+      incoming.style.clipPath = dir === 'prev' ? 'inset(0 0 0 100%)' : 'inset(0 100% 0 0)';
+      void incoming.offsetWidth;
+      incoming.style.transition = '';
+      incoming.style.clipPath = 'inset(0 0 0 0)';
+      current = index;
+      dots.forEach((d, i2) => {
+        d.classList.toggle('active', i2 === index);
+        d.setAttribute('aria-current', String(i2 === index));
+      });
+    }
+    function next() { goTo((current + 1) % slides.length, 'next'); }
+    function prev() { goTo((current - 1 + slides.length) % slides.length, 'prev'); }
+
+    nextBtn?.addEventListener('click', () => { next(); resetAutoplay(); });
+    prevBtn?.addEventListener('click', () => { prev(); resetAutoplay(); });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i, i > current ? 'next' : 'prev'); resetAutoplay(); }));
+
+    let autoplayTimer = null;
+    function startAutoplay() { if (!prefersReduced) autoplayTimer = setInterval(next, 4200); }
+    function stopAutoplay() { clearInterval(autoplayTimer); }
+    function resetAutoplay() { stopAutoplay(); startAutoplay(); }
+
+    slider.addEventListener('mouseenter', stopAutoplay);
+    slider.addEventListener('mouseleave', startAutoplay);
+    startAutoplay();
+  })();
+
   /* ===== MENU TABS (+ replay GSAP reveal on switch) ===== */
   const tabs   = document.querySelectorAll('.menu-tab');
   const panels = document.querySelectorAll('.menu-panel');
@@ -1031,27 +1094,6 @@
     });
   }
 
-  /* ===== SUBTLE 3D TILT ===== */
-  function addTilt(el, max) {
-    if (!el || prefersReduced || !pointerFine) return;
-    el.style.perspective = '700px';
-    const qrx = gsap.quickTo(el, 'rotationY', { duration: 0.6, ease: 'power3.out' });
-    const qry = gsap.quickTo(el, 'rotationX', { duration: 0.6, ease: 'power3.out' });
-    el.addEventListener('mousemove', e => {
-      const r = el.getBoundingClientRect();
-      qrx((((e.clientX - r.left) / r.width) - 0.5) * max);
-      qry(-(((e.clientY - r.top) / r.height) - 0.5) * max);
-    });
-    el.addEventListener('mouseleave', () => { qrx(0); qry(0); });
-  }
-  document.querySelectorAll('.g-tile').forEach(tile => {
-    addTilt(tile, 5);
-    const img = tile.querySelector('img');
-    if (!img || prefersReduced || !pointerFine) return;
-    tile.addEventListener('mouseenter', () => { gsap.to(tile, { y: -6, duration: 0.4, ease: 'power3.out' }); gsap.to(img, { scale: 1.06, duration: 0.5, ease: 'power3.out' }); });
-    tile.addEventListener('mouseleave', () => { gsap.to(tile, { y: 0, duration: 0.4, ease: 'power3.out' }); gsap.to(img, { scale: 1, duration: 0.5, ease: 'power3.out' }); });
-  });
-
   /* ===== FONTS READY -> BUILD ALL SPLIT-TEXT / SCROLL ANIMATIONS ===== */
   const fontsReady = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
   fontsReady.then(init).catch(init);
@@ -1134,22 +1176,15 @@
     revealGroup('.deals-grid', 0.12);
     revealGroup('.testimonial-grid', 0.12);
 
-    // Gallery tiles: fade/scale on the tile, clip-path + scale reveal on the image
-    document.querySelectorAll('.gallery-grid').forEach(group => {
-      const tiles = group.children;
-      gsap.set(tiles, { opacity: 0, y: 34, scale: 0.96 });
-      gsap.to(tiles, {
-        opacity: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.08, ease: 'power3.out', clearProps: 'transform,opacity',
-        scrollTrigger: { trigger: group, start: 'top 85%' }
+    // Gallery slider: fade/scale reveal on scroll
+    const gallerySlider = document.querySelector('.gallery-slider');
+    if (gallerySlider) {
+      gsap.set(gallerySlider, { opacity: 0, y: 34, scale: 0.97 });
+      gsap.to(gallerySlider, {
+        opacity: 1, y: 0, scale: 1, duration: 0.8, ease: 'power3.out', clearProps: 'all',
+        scrollTrigger: { trigger: gallerySlider, start: 'top 85%' }
       });
-    });
-    document.querySelectorAll('.g-tile img').forEach(img => {
-      gsap.set(img, { clipPath: 'inset(0% 0 100% 0)', scale: 1.15 });
-      gsap.to(img, {
-        clipPath: 'inset(0% 0 0% 0)', scale: 1, duration: 1, ease: 'power4.out', clearProps: 'clipPath',
-        scrollTrigger: { trigger: img, start: 'top 88%' }
-      });
-    });
+    }
 
     // Initial menu panel reveal when the menu section scrolls into view
     ScrollTrigger.create({
@@ -1167,14 +1202,6 @@
     gsap.to('.about', {
       opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', clearProps: 'all',
       scrollTrigger: { trigger: '.about', start: 'top 82%' }
-    });
-
-    /* ---- Subtle parallax depth on gallery + about photography ---- */
-    gsap.utils.toArray('.g-tile img').forEach((img, i) => {
-      gsap.to(img, {
-        y: i % 2 === 0 ? -18 : -8, ease: 'none',
-        scrollTrigger: { trigger: img.closest('.g-tile'), start: 'top bottom', end: 'bottom top', scrub: true }
-      });
     });
   }
 })();
