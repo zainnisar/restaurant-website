@@ -1,8 +1,18 @@
 # Guildford Mina Pizzeria — Website
 
+[![Live Demo](https://img.shields.io/badge/live-demo-C1440E?style=flat-square)](https://mina-pizzeria.netlify.app/)
+[![Built with GSAP](https://img.shields.io/badge/built%20with-GSAP-88CE02?style=flat-square)](https://gsap.com/)
+[![Smooth scroll: Lenis](https://img.shields.io/badge/smooth%20scroll-Lenis-000000?style=flat-square)](https://github.com/darkroomengineering/lenis)
+
 **Live site:** https://mina-pizzeria.netlify.app/
 
 A single-page website for **Guildford Mina Pizzeria**, 316 Railway Terrace, Guildford NSW 2161 — open 24 hours, 7 days a week. Static HTML/CSS/JS (no build step, no framework), with GSAP + Lenis for scroll animations and smooth scrolling.
+
+<!--
+  TODO: add a screenshot or short GIF of the site here, e.g.:
+  ![Site preview](images/preview.gif)
+  A screen recording of the hero entrance + scroll reveals will sell this repo far better than any text description.
+-->
 
 ---
 
@@ -39,4 +49,4 @@ guildford-mina-pizzeria-website/
 
 ## License / Ownership
 
-All content (copy, photos, business information) belongs to Guildford Mina Pizzeria. This repository contains the website source only — it is not licensed for reuse as a template without permission.
+The **code** (HTML/CSS/JS structure and animation techniques) is free to reference or reuse as inspiration for your own projects. The **content** — copy, photos, and business information (menu, address, phone, reviews) — belongs to Guildford Mina Pizzeria and is not licensed for reuse; swap it out before using this as a template.
