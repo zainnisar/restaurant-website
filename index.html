@@ -971,13 +971,12 @@
     if (!slides.length) return;
 
     let current = 0;
-    let zCounter = 1;
-    slides.forEach((s, i) => { s.style.zIndex = i === 0 ? String(zCounter) : '0'; });
+    slides.forEach((s, i) => { s.style.zIndex = i === 0 ? '2' : '0'; });
 
     function goTo(index, dir) {
       if (index === current) return;
       const incoming = slides[index];
-      incoming.style.zIndex = String(++zCounter);
+      slides.forEach((s, i2) => { s.style.zIndex = i2 === index ? '2' : (i2 === current ? '1' : '0'); });
       incoming.style.transition = 'none';
       incoming.style.clipPath = dir === 'prev' ? 'inset(0 0 0 100%)' : 'inset(0 100% 0 0)';
       void incoming.offsetWidth;
