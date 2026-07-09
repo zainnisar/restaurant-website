@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guildford Mina Pizzeria — Always Fresh, Always Made to Order</title>
+<meta name="description" content="Guildford Mina Pizzeria — fresh pizza, Lebanese manoush and BBQ kaak, made fresh to order. Open 24 hours a day, 7 days a week on Railway Terrace, Guildford NSW.">
+<meta name="theme-color" content="#C1440E">
+<!-- TODO: replace YOUR-DOMAIN-HERE.com below with the real domain once deployed -->
+<link rel="canonical" href="https://YOUR-DOMAIN-HERE.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://YOUR-DOMAIN-HERE.com/">
+<meta property="og:title" content="Guildford Mina Pizzeria — Always Fresh, Always Made to Order">
+<meta property="og:description" content="Fresh pizza, Lebanese manoush, BBQ kaak and more — made fresh in Guildford, day or night. Open 24 hours, 7 days a week.">
+<meta property="og:image" content="https://YOUR-DOMAIN-HERE.com/images/hero-banner.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Guildford Mina Pizzeria",
+  "image": "https://YOUR-DOMAIN-HERE.com/images/hero-banner.jpg",
+  "url": "https://YOUR-DOMAIN-HERE.com/",
+  "telephone": "+61298921448",
+  "priceRange": "$$",
+  "servesCuisine": ["Pizza", "Lebanese", "Italian"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "316 Railway Terrace",
+    "addressLocality": "Guildford",
+    "addressRegion": "NSW",
+    "postalCode": "2161",
+    "addressCountry": "AU"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }],
+  "sameAs": [
+    "https://www.facebook.com/guildford.mina/",
+    "https://www.instagram.com/guildford_mina/"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.2",
+    "reviewCount": "740"
+  }
+}
+</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23FBF3E6'/%3E%3Cpath d='M32 10 L54 50 A26 26 0 0 1 10 50 Z' fill='%23E8B84B'/%3E%3Cpath d='M10 50 A26 26 0 0 0 54 50 Z' fill='none' stroke='%23C4924B' stroke-width='5'/%3E%3Ccircle cx='27' cy='32' r='4.2' fill='%23C1440E'/%3E%3Ccircle cx='38' cy='37' r='3.6' fill='%23C1440E'/%3E%3Ccircle cx='30' cy='43' r='3.2' fill='%23C1440E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black: #FBF3E6;
+    --charcoal: #F3E4C8;
+    --charcoal-2: #FFFDF8;
+    --red: #C1440E;
+    --red-light: #DD6B3A;
+    --orange: #8F5313;
+    --white: #FFFFFF;
+    --ink: #2B2016;
+    --olive: #6B7A4A;
+    --cream-dim: #6E5D4C;
+    --line: rgba(43,32,20,0.15);
+    --radius: 12px;
+    --maxw: 1180px;
+    --perspective: 1000px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html.lenis{ height:auto; }
+  html.lenis, html.lenis body{ height:auto; }
+  .lenis.lenis-smooth{ scroll-behavior:auto !important; }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    background:var(--black);
+    color:var(--ink);
+    font-family:'Nunito', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Instrument Sans', sans-serif;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    line-height:1.2;
+    color:var(--ink);
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-size:12.5px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--orange);
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:16px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:22px; height:3px;
+    background:var(--orange);
+    border-radius:2px;
+    display:inline-block;
+  }
+  :focus-visible{ outline:2px solid var(--orange); outline-offset:3px; }
+
+  /* ---------- SCALLOP DIVIDER ---------- */
+  .scallop{
+    width:100%; height:26px; display:block; color:var(--orange);
+  }
+  .scallop path{ fill:currentColor; }
+  .scallop.dim{ color:var(--line); opacity:0.7; }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,243,230,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .top-bar{
+    background:var(--red);
+    color:#fff;
+    font-size:12.5px;
+    font-weight:600;
+    text-align:center;
+    padding:7px 12px;
+    letter-spacing:0.03em;
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; height:76px; }
+  .logo{ display:flex; align-items:center; gap:12px; font-family:'Instrument Sans',sans-serif; font-size:19px; font-weight:700; color:var(--ink); }
+  .logo .mark{
+    width:42px; height:42px; border-radius:50%;
+    background:#fff; border:2px solid var(--red); overflow:hidden;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow:0 4px 12px rgba(193,68,14,0.3);
+  }
+  .logo .mark img{ width:100%; height:100%; object-fit:cover; transform:scale(1.5); }
+  .logo:hover .mark{
+    transform:rotate(8deg) scale(1.06);
+    box-shadow:0 6px 16px rgba(193,68,14,0.4);
+  }
+  .logo .mark svg{ width:22px; height:22px; color:var(--white); }
+  .logo span.sub{
+    display:block; font-family:'Nunito',sans-serif; font-size:10px;
+    letter-spacing:0.16em; color:var(--orange); font-weight:700; text-transform:uppercase; margin-top:2px;
+  }
+  nav.links{ display:flex; gap:28px; font-size:14px; font-weight:600; }
+  nav.links a{ color:var(--cream-dim); transition:color .2s ease; display:inline-block; }
+  nav.links a:hover{ color:var(--red); }
+  .nav-cta{ display:flex; gap:10px; align-items:center; }
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:12px 24px; font-size:13px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+    border-radius:var(--radius); border:1.5px solid transparent; cursor:pointer;
+    white-space:nowrap; position:relative;
+    transition:transform .15s ease, box-shadow .15s ease, filter .2s ease, background .2s ease;
+  }
+  .btn svg{ width:16px; height:16px; }
+  .btn-solid{
+    background:var(--red);
+    color:var(--white);
+    box-shadow:0 3px 10px rgba(193,68,14,0.35);
+  }
+  .btn-solid:hover{
+    background:var(--red-light);
+    transform:translateY(-2px);
+    box-shadow:0 6px 16px rgba(193,68,14,0.4);
+  }
+  .btn-solid:active{
+    transform:translateY(0);
+    box-shadow:0 2px 6px rgba(193,68,14,0.3);
+  }
+  .btn-outline{
+    background:transparent; color:var(--red); border-color:var(--red);
+  }
+  .btn-outline:hover{
+    background:rgba(193,68,14,0.08);
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  }
+  .hero .btn-outline{
+    background:rgba(255,253,248,0.14); border-color:rgba(255,255,255,0.75); color:#fff;
+  }
+  .hero .btn-outline:hover{
+    background:rgba(255,253,248,0.26);
+  }
+  .btn-outline:active{ transform:translateY(0); }
+  .menu-toggle{ display:none; background:none; border:0; color:var(--red); font-size:26px; cursor:pointer; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    min-height:680px; display:flex; align-items:center; justify-content:center;
+    padding:150px 0 90px; text-align:center;
+  }
+  .hero-bg{
+    position:absolute; inset:-20px; z-index:0;
+    background:
+      linear-gradient(180deg, rgba(20,12,6,0.6), rgba(20,12,6,0.74)),
+      url('images/hero-banner.jpg') center 55% / cover no-repeat;
+    will-change:transform;
+  }
+  .hero-grid{
+    display:flex; flex-direction:column; align-items:center;
+    max-width:720px; margin:0 auto; position:relative; z-index:1;
+  }
+  .badges{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:22px; justify-content:center; }
+  .badge{
+    display:inline-flex; align-items:center; gap:6px;
+    background:rgba(255,253,248,0.96); border:1px solid rgba(255,255,255,0.4);
+    padding:7px 14px; border-radius:30px; font-size:12.5px; font-weight:700;
+    color:var(--ink);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .badge:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 16px rgba(0,0,0,0.25);
+  }
+  .badge.live{ color:var(--orange); }
+  .badge .dot{ width:7px; height:7px; border-radius:50%; background:#3E9E52; animation:pulse 1.8s infinite; }
+  @keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+  .hero h1{
+    font-size:clamp(30px, 4.6vw, 56px); letter-spacing:0.02em; color:#fff;
+    text-shadow:0 4px 24px rgba(0,0,0,0.4);
+  }
+  .hero p.lead{
+    margin-top:22px; max-width:520px; font-size:18px; font-style:italic;
+    color:rgba(255,253,248,0.94);
+  }
+  .hero .cta-row{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; justify-content:center; }
+  .hero .rating-line{
+    margin-top:28px; display:flex; align-items:center; gap:10px; font-size:14px;
+    color:rgba(255,253,248,0.85); justify-content:center;
+  }
+  .hero .rating-line strong{ color:#fff; }
+  .stars-inline{ color:var(--orange); letter-spacing:1px; }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{ padding:90px 0; }
+  .section-head{ max-width:640px; margin-bottom:48px; }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  .section-head.center .eyebrow{ justify-content:center; }
+  .section-head h2{
+    font-size:clamp(28px, 3.2vw, 40px);
+  }
+  .section-head p{ margin-top:14px; color:var(--cream-dim); font-size:15.5px; max-width:520px; }
+  .section-head.center p{ margin-left:auto; margin-right:auto; }
+
+  /* ---------- MENU ---------- */
+  .menu-section{ background:var(--charcoal); }
+  .menu-tabs{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; }
+  .menu-tab{
+    padding:9px 18px; border-radius:30px; font-size:13px; font-weight:700;
+    border:1px solid var(--line); background:transparent; color:var(--cream-dim); cursor:pointer;
+    transition:background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .menu-tab.active, .menu-tab:hover{
+    background:var(--red);
+    color:var(--white); border-color:transparent;
+  }
+  .menu-panel{ display:none; }
+  .menu-panel.active{ display:block; }
+  .menu-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; }
+
+  .menu-card{
+    background:var(--charcoal-2); border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px 24px; display:flex; justify-content:space-between; align-items:flex-start; gap:14px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .menu-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(43,32,20,0.08);
+    border-color:rgba(193,68,14,0.35);
+  }
+  .menu-card h4{ font-size:16px; font-weight:600; }
+  .menu-card p{ font-size:13px; color:var(--cream-dim); margin-top:5px; }
+  .menu-card .tag{ display:inline-block; margin-top:8px; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--orange); font-weight:700; }
+
+  /* ---------- DEALS ---------- */
+  .deals-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+  .deal-card{
+    position:relative;
+    background:var(--charcoal-2);
+    border:1px solid var(--line); border-radius:var(--radius); padding:30px; overflow:hidden;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .deal-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 30px rgba(43,32,20,0.1);
+    border-color:rgba(193,68,14,0.35);
+  }
+  .deal-card::before{
+    content:''; position:absolute; top:-40px; right:-40px; width:120px; height:120px; border-radius:50%;
+    background:radial-gradient(circle, rgba(182,101,29,0.12), transparent 70%);
+  }
+  .deal-card .badge2{
+    display:inline-block; background:var(--red); color:var(--white); font-size:11px; font-weight:800;
+    padding:4px 10px; border-radius:20px; margin-bottom:14px; letter-spacing:0.04em;
+  }
+  .deal-card h3{ font-size:20px; }
+  .deal-card p{ margin-top:8px; font-size:14px; color:var(--cream-dim); }
+  .deal-card .price{
+    font-family:'Instrument Sans',sans-serif; font-size:28px; font-weight:600; color:var(--red);
+    margin-top:16px; display:inline-block;
+  }
+  .deal-note{ text-align:center; font-size:13px; color:var(--cream-dim); margin-top:28px; }
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid{ display:grid; grid-template-columns:repeat(4, 1fr); grid-auto-rows:140px; gap:12px; }
+  .gallery-grid > div:nth-child(1){ grid-column:span 2; grid-row:span 2; }
+  .gallery-grid > div:nth-child(4){ grid-row:span 2; }
+  .g-tile{
+    border-radius:var(--radius); border:1px solid var(--line);
+    background:var(--charcoal-2);
+    display:flex; align-items:center; justify-content:center; color:var(--orange); opacity:0.9;
+    transition:box-shadow .3s ease, border-color .3s ease, opacity .3s ease;
+    cursor:pointer;
+    overflow:hidden;
+    position:relative;
+    transform-style:preserve-3d; will-change:transform;
+  }
+  .g-tile:hover{
+    box-shadow:0 16px 32px rgba(43,32,20,0.14);
+    border-color:var(--orange); opacity:1;
+  }
+  .g-tile svg{ width:34%; height:34%; position:relative; z-index:1; }
+  .g-tile img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    position:relative; z-index:1;
+  }
+  .tile-label{
+    position:absolute; bottom:0; left:0; right:0; z-index:2;
+    padding:12px 14px 10px;
+    background:linear-gradient(transparent, rgba(0,0,0,0.75));
+    font-size:11.5px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+    color:#fff; opacity:0; transition:opacity .3s ease;
+  }
+  .g-tile:hover .tile-label{ opacity:1; }
+  .gallery-note{ text-align:center; font-size:13px; color:var(--cream-dim); margin-top:24px; }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center; }
+  .about-visual{
+    aspect-ratio:4/5; border:1px solid var(--line); border-radius:var(--radius);
+    background:var(--charcoal-2);
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+    transition:box-shadow .4s ease;
+  }
+  .about-visual:hover{
+    box-shadow:0 20px 40px rgba(43,32,20,0.14);
+  }
+  .about-visual img{
+    width:100%; height:100%; object-fit:cover; border-radius:var(--radius);
+    transition:transform .5s ease;
+  }
+  .about-visual:hover img{ transform:scale(1.04); }
+  .about h2{
+    font-size:clamp(26px, 3vw, 36px);
+  }
+  .about p{ margin-top:16px; color:var(--cream-dim); font-size:15.5px; max-width:480px; }
+  .about-tags{ display:flex; gap:10px; flex-wrap:wrap; margin-top:26px; }
+  .about-tags span{
+    font-size:12.5px; font-weight:700; padding:7px 14px; border-radius:20px;
+    border:1px solid var(--line); color:var(--cream-dim);
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .about-tags span:hover{
+    border-color:rgba(182,101,29,0.5);
+    color:var(--orange);
+  }
+  .about-stats{ display:flex; gap:40px; margin-top:30px; flex-wrap:wrap; }
+  .about-stats div strong{
+    display:block; font-family:'Instrument Sans',sans-serif; font-size:28px; font-weight:600; color:var(--red);
+  }
+  .about-stats div span{ font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--cream-dim); }
+
+  /* ---------- REVIEWS ---------- */
+  .reviews-section{ background:var(--charcoal); }
+  .review-strip{
+    display:flex; align-items:center; gap:16px; margin-bottom:44px; flex-wrap:wrap;
+  }
+  .review-score{
+    font-family:'Instrument Sans',sans-serif; font-size:52px; font-weight:600; color:var(--red); line-height:1;
+  }
+  .review-score-sub{ font-size:13px; color:var(--cream-dim); }
+  .testimonial-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+  .t-card{
+    background:var(--charcoal-2); border:1px solid var(--line); border-radius:var(--radius); padding:26px;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .t-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(43,32,20,0.08);
+  }
+  .t-card .stars{ color:var(--orange); font-size:14px; margin-bottom:12px; }
+  .t-card p{ color:var(--cream-dim); font-size:14.5px; }
+  .t-card .who{ margin-top:16px; font-size:12.5px; color:var(--orange); font-weight:700; }
+
+  /* ---------- VISIT ---------- */
+  .visit-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; }
+  .hours-table{ width:100%; border-collapse:collapse; margin-top:22px; }
+  .hours-table td{ padding:10px 0; border-bottom:1px solid var(--line); font-size:14px; }
+  .hours-table td:first-child{ color:var(--cream-dim); }
+  .hours-table td:last-child{ text-align:right; font-weight:700; color:var(--orange); }
+  .addr-block{ margin-top:6px; color:var(--cream-dim); font-size:15px; }
+  .addr-block strong{ color:var(--ink); display:block; margin-bottom:6px; font-size:16px; font-family:'Instrument Sans',sans-serif; }
+  .map-frame{
+    border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; min-height:340px;
+    transition:box-shadow .3s ease;
+  }
+  .map-frame:hover{
+    box-shadow:0 16px 32px rgba(43,32,20,0.12);
+  }
+  .map-frame iframe{ width:100%; height:100%; min-height:340px; border:0; }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta{
+    text-align:center; padding:100px 0;
+    background:radial-gradient(ellipse 800px 400px at 50% 0%, rgba(182,101,29,0.10), transparent 65%), var(--charcoal);
+    position:relative; overflow:hidden;
+  }
+  .final-cta h2{
+    font-size:clamp(28px, 4vw, 44px);
+  }
+  .final-cta p{ margin-top:12px; color:var(--cream-dim); }
+  .final-cta .cta-row{ justify-content:center; margin-top:30px; }
+
+  footer{ border-top:1px solid var(--line); padding:46px 0 30px; background:var(--charcoal); }
+  .foot-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:36px; }
+  .foot-grid h4{ font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:var(--orange); margin-bottom:14px; }
+  .foot-grid p, .foot-grid a{ font-size:14px; color:var(--cream-dim); display:block; margin-bottom:8px; }
+  .foot-grid a:hover{ color:var(--red); }
+  .foot-bottom{
+    margin-top:38px; padding-top:22px; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:12.5px; color:var(--cream-dim);
+  }
+
+  /* ---------- SCROLL PROGRESS ---------- */
+  #scrollProgress{
+    position:fixed; top:0; left:0; height:3px; width:0%; z-index:210;
+    background:linear-gradient(90deg, var(--red), var(--orange));
+  }
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    background:var(--ink); overflow:hidden; padding:16px 0;
+    transform:rotate(-1deg); margin:-14px 0; position:relative; z-index:2;
+  }
+  .marquee-track{ display:flex; gap:40px; width:max-content; animation:marquee-scroll 24s linear infinite; }
+  .marquee:hover .marquee-track{ animation-play-state:paused; }
+  .marquee span{
+    font-family:'Instrument Sans',sans-serif; font-size:16px; font-weight:500;
+    text-transform:uppercase; letter-spacing:0.12em; color:var(--black);
+    display:flex; align-items:center; gap:16px; white-space:nowrap;
+  }
+  .marquee span::after{ content:'✦'; color:var(--orange); }
+  @keyframes marquee-scroll{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+  }
+
+  .hero h1 .accent{ color:var(--red); font-style:italic; font-weight:400; }
+  .split-word{ will-change:transform, opacity; }
+  .split-line{ overflow:hidden; }
+
+  @media (max-width:900px){
+    nav.links{ display:none; }
+    .menu-toggle{ display:block; }
+    .about-grid, .visit-grid{ grid-template-columns:1fr; }
+    .about-visual{ order:-1; max-width:300px; margin:0 auto; }
+    .menu-grid{ grid-template-columns:1fr; }
+    .deals-grid{ grid-template-columns:1fr; }
+    .testimonial-grid{ grid-template-columns:1fr; }
+    .gallery-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:120px; }
+    .foot-grid{ grid-template-columns:1fr; }
+    .nav-cta .btn-outline{ display:none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="scrollProgress"></div>
+
+<div class="top-bar">🔥 Open 24 Hours, 7 Days a Week — Order Anytime</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="mark">
+        <img src="images/logo-icon.png" alt="" width="26" height="26">
+      </span>
+      <span>Guildford Mina<span class="sub">Pizzeria</span></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#menu">Full Menu</a>
+      <a href="#deals">Deals</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Location</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+61298921448" class="btn btn-outline">Call</a>
+      <a href="https://guildford-mina-pizzeria.nextorder.com/" class="btn btn-solid" target="_blank" rel="noopener">Order Now</a>
+    </div>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="badges">
+        <span class="badge live"><span class="dot"></span> Open 24 Hours</span>
+        <span class="badge">⭐ 4.2 · 740+ Google Reviews</span>
+        <span class="badge">Halal-Friendly</span>
+      </div>
+      <h1 id="heroHeading">Welcome to<br><span class="accent">Guildford Mina Pizzeria!</span></h1>
+      <p class="lead">"Fast, fresh and made properly. Every time."</p>
+      <div class="cta-row">
+        <a href="https://guildford-mina-pizzeria.nextorder.com/" class="btn btn-solid" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16l-1.5 10.5a2 2 0 01-2 1.5H7.5a2 2 0 01-2-1.5L4 6z" stroke="white" stroke-width="1.5"/><path d="M8 6V5a4 4 0 018 0v1" stroke="white" stroke-width="1.5"/></svg>
+          Order Online
+        </a>
+        <a href="#menu" class="btn btn-outline">View Full Menu</a>
+      </div>
+      <div class="rating-line">
+        <span class="stars-inline">★★★★☆</span>
+        <span><strong>4.2/5</strong> from over 740 reviews — one of Guildford's most-loved pizza spots</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Fresh Daily</span><span>Open 24/7</span><span>Family Owned</span><span>Free Delivery</span><span>Made To Order</span>
+      <span>Fresh Daily</span><span>Open 24/7</span><span>Family Owned</span><span>Free Delivery</span><span>Made To Order</span>
+    </div>
+  </div>
+
+  <svg class="scallop" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 0 Q20 26 40 0 Q60 26 80 0 Q100 26 120 0 Q140 26 160 0 Q160 26 180 0 Q200 26 220 0 Q240 26 260 0 Q280 26 300 0 Q320 26 340 0 Q360 26 380 0 Q400 26 420 0 Q440 26 460 0 Q480 26 500 0 Q520 26 540 0 Q560 26 580 0 Q600 26 620 0 Q640 26 660 0 Q680 26 700 0 Q720 26 740 0 Q760 26 780 0 Q800 26 820 0 Q840 26 860 0 Q880 26 900 0 Q920 26 940 0 Q960 26 980 0 Q1000 26 1020 0 Q1040 26 1060 0 Q1080 26 1100 0 Q1120 26 1140 0 Q1160 26 1180 0 Q1200 26 1200 0 L1200 26 L0 26 Z"/>
+  </svg>
+
+  <!-- MENU -->
+  <section class="menu-section" id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Full Menu</div>
+        <h2>Bigger than your average pizza shop.</h2>
+        <p>Pizza, Lebanese manoush, BBQ kaak, burgers and dessert pizza — all made fresh to order.</p>
+      </div>
+
+      <div class="menu-tabs" role="tablist">
+        <button class="menu-tab active" data-tab="pizza">Pizza</button>
+        <button class="menu-tab" data-tab="lebanese">Lebanese / Manoush</button>
+        <button class="menu-tab" data-tab="kaak">BBQ Kaak</button>
+        <button class="menu-tab" data-tab="burgers">Burgers</button>
+        <button class="menu-tab" data-tab="dessert">Dessert Pizza</button>
+        <button class="menu-tab" data-tab="drinks">Drinks</button>
+      </div>
+
+      <div class="menu-panel active" id="pizza">
+        <div class="menu-grid">
+          <div class="menu-card"><div><h4>Peri Peri Chicken</h4><p>Grilled chicken, peri peri sauce, mozzarella.</p><span class="tag">Popular</span></div></div>
+          <div class="menu-card"><div><h4>Meat Lovers</h4><p>Loaded with a mix of house meats.</p></div></div>
+          <div class="menu-card"><div><h4>Chicken Supreme</h4><p>Chicken, capsicum, onion, mushroom, mozzarella.</p></div></div>
+          <div class="menu-card"><div><h4>Tandoori Chicken</h4><p>Tandoori-spiced chicken, yoghurt sauce, onion.</p></div></div>
+          <div class="menu-card"><div><h4>Hot &amp; Spicy</h4><p>Spicy salami, jalapeño, chilli, mozzarella.</p></div></div>
+          <div class="menu-card"><div><h4>Pepperoni</h4><p>Classic pepperoni, mozzarella, tomato base.</p></div></div>
+          <div class="menu-card"><div><h4>Hawaiian</h4><p>Ham, pineapple, mozzarella.</p></div></div>
+          <div class="menu-card"><div><h4>BBQ Chicken</h4><p>Chicken, BBQ sauce, onion, mozzarella.</p></div></div>
+          <div class="menu-card"><div><h4>Vegetarian Deluxe</h4><p>Capsicum, mushroom, onion, olives, tomato.</p><span class="tag">V</span></div></div>
+          <div class="menu-card"><div><h4>Cheese Pizza</h4><p>Simple, fresh, loaded with mozzarella.</p></div></div>
+          <div class="menu-card"><div><h4>Margherita</h4><p>Tomato, mozzarella, basil.</p><span class="tag">V</span></div></div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="lebanese">
+        <div class="menu-grid">
+          <div class="menu-card"><div><h4>Cheese Manoush</h4><p>Traditional flatbread, melted cheese.</p></div></div>
+          <div class="menu-card"><div><h4>Zaatar</h4><p>Zaatar spice blend, olive oil, fresh-baked.</p><span class="tag">Popular</span></div></div>
+          <div class="menu-card"><div><h4>Meat Manoush</h4><p>Spiced minced meat, onion, traditional style.</p></div></div>
+          <div class="menu-card"><div><h4>Cheese &amp; Zaatar</h4><p>The best of both, in one manoush.</p></div></div>
+          <div class="menu-card"><div><h4>Labneh</h4><p>Creamy strained yoghurt, olive oil, mint.</p></div></div>
+          <div class="menu-card"><div><h4>Sujuk</h4><p>Spiced Lebanese sausage, melted cheese.</p></div></div>
+          <div class="menu-card"><div><h4>Spinach</h4><p>Spiced spinach, onion, lemon, sumac.</p><span class="tag">V</span></div></div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="kaak">
+        <div class="menu-grid">
+          <div class="menu-card"><div><h4>BBQ Kaak</h4><p>One of our specialties — traditional sesame bread, grilled fresh.</p><span class="tag">House Specialty</span></div></div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="burgers">
+        <div class="menu-grid">
+          <div class="menu-card"><div><h4>Chicken Burger</h4><p>Grilled or crispy chicken, fresh salad, house sauce.</p></div></div>
+          <div class="menu-card"><div><h4>Beef Burger</h4><p>Beef patty, cheese, fresh salad, house sauce.</p></div></div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="dessert">
+        <div class="menu-grid">
+          <div class="menu-card"><div><h4>Nutella Pizza</h4><p>Fresh base, loaded with Nutella.</p><span class="tag">Popular</span></div></div>
+          <div class="menu-card"><div><h4>Knafeh Pizza</h4><p>Sweet cheese, crispy kataifi, sugar syrup.</p></div></div>
+        </div>
+      </div>
+
+      <div class="menu-panel" id="drinks">
+        <div class="menu-grid">
+          <div class="menu-card"><div><h4>Coke</h4></div></div>
+          <div class="menu-card"><div><h4>Sprite</h4></div></div>
+          <div class="menu-card"><div><h4>Fanta</h4></div></div>
+          <div class="menu-card"><div><h4>Water</h4></div></div>
+          <div class="menu-card"><div><h4>Juices</h4></div></div>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin-top:28px; font-size:13px; color:var(--cream-dim);">All items made fresh to order. Call <a href="tel:+61298921448" style="color:var(--orange);">(02) 9892 1448</a> for current sizing and pricing.</p>
+    </div>
+  </section>
+
+  <svg class="scallop dim" viewBox="0 0 1200 26" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 0 Q20 26 40 0 Q60 26 80 0 Q100 26 120 0 Q140 26 160 0 Q160 26 180 0 Q200 26 220 0 Q240 26 260 0 Q280 26 300 0 Q320 26 340 0 Q360 26 380 0 Q400 26 420 0 Q440 26 460 0 Q480 26 500 0 Q520 26 540 0 Q560 26 580 0 Q600 26 620 0 Q640 26 660 0 Q680 26 700 0 Q720 26 740 0 Q760 26 780 0 Q800 26 820 0 Q840 26 860 0 Q880 26 900 0 Q920 26 940 0 Q960 26 980 0 Q1000 26 1020 0 Q1040 26 1060 0 Q1080 26 1100 0 Q1120 26 1140 0 Q1160 26 1180 0 Q1200 26 1200 0 L1200 26 L0 26 Z"/>
+  </svg>
+
+  <!-- DEALS -->
+  <section id="deals">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Special Deals</div>
+        <h2>Big portions. Fair prices.</h2>
+        <p>Combo deals available in-store, 24 hours a day, 7 days a week.</p>
+      </div>
+      <div class="deals-grid">
+        <div class="deal-card">
+          <span class="badge2">Value Deal</span>
+          <h3>Pizza Combo</h3>
+          <p>Great value pizza deal — perfect for a quick meal any time of day or night.</p>
+          <div class="price">$24.90</div>
+        </div>
+        <div class="deal-card">
+          <span class="badge2">Family Deal</span>
+          <h3>Family Pack</h3>
+          <p>Feed the whole family — generous portions at an honest price, available all day.</p>
+          <div class="price">$34.90</div>
+        </div>
+        <div class="deal-card">
+          <span class="badge2">Party Pack</span>
+          <h3>Group Feast</h3>
+          <p>Our biggest deal — ideal for groups, events or a serious night in. Feeds a crowd.</p>
+          <div class="price">$64.90</div>
+        </div>
+      </div>
+      <p class="deal-note">Deal prices displayed in-store. Call <a href="tel:+61298921448" style="color:var(--orange);">(02) 9892 1448</a> to confirm current offers and customise your order.</p>
+      <p style="text-align:center; max-width:640px; margin:24px auto 0; font-size:14px; font-style:italic; color:var(--cream-dim);">"We paid under $60 for 2 large pizzas of any choice, one family chips and 3 drinks — plus a garlic bread stick in the deal. There was so much food we couldn't even finish it." <strong style="font-style:normal; color:var(--orange);">— OCE_QUARTEZ</strong></p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="menu-section" id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Gallery</div>
+        <h2>Fresh out of the oven.</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="g-tile">
+          <img src="images/gallery-loaded2.jpg" alt="Loaded pizza with ham, pepperoni and jalapeño" loading="lazy">
+          <span class="tile-label">Loaded With Toppings</span>
+        </div>
+        <div class="g-tile">
+          <img src="images/gallery-manoush2.jpg" alt="Traditional folded Lebanese manoush" loading="lazy">
+          <span class="tile-label">Lebanese Manoush</span>
+        </div>
+        <div class="g-tile">
+          <img src="images/gallery-pepperoni.jpg" alt="Classic pepperoni pizza" loading="lazy">
+          <span class="tile-label">Classic Pepperoni</span>
+        </div>
+        <div class="g-tile">
+          <img src="images/gallery-interior.jpg" alt="Inside Guildford Mina Pizzeria — the counter and menu boards" loading="lazy">
+          <span class="tile-label">Inside the Shop</span>
+        </div>
+        <div class="g-tile">
+          <img src="images/gallery-chicken.jpg" alt="Chicken Supreme pizza with capsicum and olives" loading="lazy">
+          <span class="tile-label">Chicken Supreme</span>
+        </div>
+        <div class="g-tile">
+          <img src="images/gallery-veggie.jpg" alt="Vegetarian Deluxe pizza" loading="lazy">
+          <span class="tile-label">Vegetarian Deluxe</span>
+        </div>
+        <div class="g-tile">
+          <img src="images/gallery-kibbeh.jpg" alt="Traditional Lebanese kibbeh" loading="lazy">
+          <span class="tile-label">Traditional Kibbeh</span>
+        </div>
+      </div>
+      <p class="gallery-note">Real photos from our shop and our customers.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-visual">
+        <img
+          src="images/about-photo.jpg"
+          alt="Freshly made pizza with prawns, cherry tomatoes and dill at Guildford Mina Pizzeria"
+          loading="lazy"
+          style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);"
+        >
+      </div>
+      <div class="about">
+        <div class="eyebrow">About Us</div>
+        <h2>A Guildford institution, day and night.</h2>
+        <p>At Guildford Mina Pizzeria, we believe great pizza starts with great ingredients — our passion is bringing people together over freshly made pizzas, crafted with quality toppings, rich sauces and perfectly baked dough. Whether you're grabbing a quick bite or sharing a meal with family and friends, every pizza is made with care and a love for authentic flavour. We're proud to be part of the Guildford community, One slice at a time, we're dedicated to delivering the taste, quality, and experience that keeps our customers coming back.</p>
+        <div class="about-tags">
+          <span>Halal-Friendly</span>
+          <span>Open 24 Hours</span>
+          <span>Family Owned</span>
+          <span>Free Delivery</span>
+          <span>Takeaway</span>
+          <span>EFTPOS &amp; Cards</span>
+          <span>Vegetarian Options</span>
+          <span>Wheelchair Accessible</span>
+        </div>
+        <div class="about-stats">
+          <div><strong data-count-to="740" data-suffix="+">0</strong><span>Google Reviews</span></div>
+          <div><strong data-count-to="4.2" data-decimals="1" data-suffix="★">0</strong><span>Google Rating</span></div>
+          <div><strong data-count-to="4.6" data-decimals="1" data-suffix="★">0</strong><span>Facebook Rating</span></div>
+          <div><strong>24/7</strong><span>Open Every Day</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="wrap">
+      <div class="review-strip">
+        <div class="review-score" data-count-to="4.2" data-decimals="1">0</div>
+        <div>
+          <div class="stars-inline" style="font-size:18px;">★★★★☆</div>
+          <div class="review-score-sub">Based on 740+ Google reviews</div>
+        </div>
+        <div style="margin-left:auto; display:flex; gap:28px; flex-wrap:wrap;">
+          <div style="text-align:center;">
+            <div style="font-family:'Instrument Sans',sans-serif; font-size:26px; font-weight:600; color:var(--red);" data-count-to="4.6" data-decimals="1">0</div>
+            <div style="font-size:12px; color:var(--cream-dim);">Facebook Rating</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:'Instrument Sans',sans-serif; font-size:26px; font-weight:600; color:var(--red);">#1</div>
+            <div style="font-size:12px; color:var(--cream-dim);">Pizza in Guildford</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-grid">
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"I love the variety here — vegetarian, pescatarian, meat lovers, there's something for everyone. Pizzas are always made fresh, quality and service are truly amazing. Open 24/7 — no excuses, you must try this place!"</p>
+          <div class="who">— Mina Wahab, Google Review</div>
+        </div>
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"Amazing pizza. Service is exceptional, staff are friendly. Open 24/7 — I always call before going so it's ready when I arrive. Only takes 10 minutes. Tried vegetable, meat and chicken pizza — really nice."</p>
+          <div class="who">— Amal Mohammad A S, Google Review</div>
+        </div>
+        <div class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>"Best pizza in Aus. Got the Peri Peri Chicken, BBQ Chicken Pizza, chips and garlic bread — all excellent." <span style="opacity:0.7;">($20–40 per person, takeaway)</span></p>
+          <div class="who">— Janice Alda, Google Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit">
+    <div class="wrap visit-grid">
+      <div>
+        <div class="eyebrow">Visit Us</div>
+        <h2>Find us on Railway Terrace.</h2>
+        <div class="addr-block">
+          <strong>Guildford Mina Pizzeria</strong>
+          316 Railway Terrace, Guildford NSW 2161
+        </div>
+        <table class="hours-table">
+          <tr><td>Monday – Sunday</td><td>Open 24 Hours</td></tr>
+          <tr><td>Public Holidays</td><td>Open 24 Hours</td></tr>
+        </table>
+        <div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:10px;">
+          <span style="font-size:12.5px; font-weight:700; padding:6px 12px; border-radius:20px; border:1px solid var(--line); color:var(--cream-dim);">✓ Free Delivery</span>
+          <span style="font-size:12.5px; font-weight:700; padding:6px 12px; border-radius:20px; border:1px solid var(--line); color:var(--cream-dim);">✓ Takeaway</span>
+          <span style="font-size:12.5px; font-weight:700; padding:6px 12px; border-radius:20px; border:1px solid var(--line); color:var(--cream-dim);">✓ EFTPOS · Visa · Mastercard</span>
+        </div>
+        <div class="cta-row" style="margin-top:24px;">
+          <a href="tel:+61298921448" class="btn btn-solid">Call (02) 9892 1448</a>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=316%20Railway%20Terrace%2C%20Guildford%20NSW%202161&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          title="Map showing 316 Railway Terrace, Guildford NSW"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" id="order">
+    <div class="wrap">
+      <div class="eyebrow" style="justify-content:center;">Hungry Now?</div>
+      <h2>We're open. Order anytime.</h2>
+      <p>Pickup or delivery — pizza and manoush made fresh, 24 hours a day.</p>
+      <div class="cta-row">
+        <a href="https://guildford-mina-pizzeria.nextorder.com/" class="btn btn-solid" target="_blank" rel="noopener">Order Online</a>
+        <a href="tel:+61298921448" class="btn btn-outline">Call (02) 9892 1448</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Guildford Mina Pizzeria</h4>
+        <p>Pizza, Lebanese manoush &amp; BBQ kaak — fresh dough, fresh ingredients, open 24 hours, every day.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+61298921448">(02) 9892 1448</a>
+        <p>316 Railway Terrace, Guildford NSW 2161</p>
+        <p style="margin-top:6px;">Free Delivery Available</p>
+        <p>EFTPOS · Visa · Mastercard</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#menu">Full Menu</a>
+        <a href="#deals">Special Deals</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Location &amp; Hours</a>
+        <a href="https://www.facebook.com/guildford.mina/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/guildford_mina/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Guildford Mina Pizzeria. All rights reserved.</span>
+      <span>Made in Guildford, NSW</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.16/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+<script>
+(function(){
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const pointerFine    = window.matchMedia('(pointer: fine)').matches;
+  const hasGSAP = typeof gsap !== 'undefined';
+  if (hasGSAP && typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+
+  /* ===== MOBILE MENU ===== */
+  const toggle = document.querySelector('.menu-toggle');
+  const links  = document.querySelector('nav.links');
+  toggle?.addEventListener('click', () => {
+    const open = links.style.display === 'flex';
+    links.style.display = open ? 'none' : 'flex';
+    links.style.cssText += open ? '' : 'position:absolute; top:76px; left:0; right:0; background:#FBF3E6; flex-direction:column; padding:20px 28px; border-bottom:1px solid rgba(43,32,20,0.15); gap:16px;';
+    toggle.setAttribute('aria-expanded', String(!open));
+  });
+
+  /* ===== MENU TABS (+ replay GSAP reveal on switch) ===== */
+  const tabs   = document.querySelectorAll('.menu-tab');
+  const panels = document.querySelectorAll('.menu-panel');
+  function animateMenuGrid(panel) {
+    const grid = panel && panel.querySelector('.menu-grid');
+    if (!grid || !hasGSAP) return;
+    const cards = grid.children;
+    gsap.killTweensOf(cards);
+    if (prefersReduced) { gsap.set(cards, { clearProps: 'all' }); return; }
+    gsap.fromTo(cards,
+      { opacity: 0, y: 26, scale: 0.97 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.05, ease: 'power3.out', clearProps: 'all' }
+    );
+  }
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const panel = document.getElementById(tab.dataset.tab);
+      panel.classList.add('active');
+      animateMenuGrid(panel);
+    });
+  });
+
+  /* ===== LENIS SMOOTH SCROLL ===== */
+  let lenis = null;
+  if (!prefersReduced && typeof Lenis !== 'undefined') {
+    lenis = new Lenis({ duration: 1.05, smoothWheel: true });
+    if (hasGSAP && typeof ScrollTrigger !== 'undefined') {
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((time) => lenis.raf(time * 1000));
+      gsap.ticker.lagSmoothing(0);
+    } else {
+      requestAnimationFrame(function raf(time){ lenis.raf(time); requestAnimationFrame(raf); });
+    }
+  }
+
+  /* ===== ANCHOR LINKS -> LENIS ===== */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (!id || id.length < 2) return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      if (lenis) lenis.scrollTo(target, { offset: -84, duration: 1.2 });
+      else target.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
+
+  if (!hasGSAP) return; // graceful fallback: page still fully usable without the CDN libs
+
+  /* ===== SCROLL PROGRESS BAR (GSAP-driven) ===== */
+  gsap.to('#scrollProgress', {
+    width: '100%', ease: 'none',
+    scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: 0.3 }
+  });
+
+  /* ===== ANIMATED COUNTERS ===== */
+  document.querySelectorAll('[data-count-to]').forEach(el => {
+    const target = parseFloat(el.dataset.countTo);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    const suffix = el.dataset.suffix || '';
+    if (prefersReduced) { el.textContent = target.toFixed(decimals) + suffix; return; }
+    const obj = { val: 0 };
+    gsap.to(obj, {
+      val: target, duration: 1.6, ease: 'power2.out',
+      scrollTrigger: { trigger: el, start: 'top 85%', once: true },
+      onUpdate: () => { el.textContent = obj.val.toFixed(decimals) + suffix; },
+      onComplete: () => { el.textContent = target.toFixed(decimals) + suffix; }
+    });
+  });
+
+  /* ===== MAGNETIC BUTTONS ===== */
+  if (!prefersReduced && pointerFine) {
+    document.querySelectorAll('.btn').forEach(btn => {
+      const qx = gsap.quickTo(btn, 'x', { duration: 0.5, ease: 'power3.out' });
+      const qy = gsap.quickTo(btn, 'y', { duration: 0.5, ease: 'power3.out' });
+      btn.addEventListener('mousemove', e => {
+        const r = btn.getBoundingClientRect();
+        qx((e.clientX - r.left - r.width / 2) * 0.25);
+        qy((e.clientY - r.top - r.height / 2) * 0.3);
+      });
+      btn.addEventListener('mouseleave', () => { qx(0); qy(0); });
+    });
+  }
+
+  /* ===== SUBTLE 3D TILT ===== */
+  function addTilt(el, max) {
+    if (!el || prefersReduced || !pointerFine) return;
+    el.style.perspective = '700px';
+    const qrx = gsap.quickTo(el, 'rotationY', { duration: 0.6, ease: 'power3.out' });
+    const qry = gsap.quickTo(el, 'rotationX', { duration: 0.6, ease: 'power3.out' });
+    el.addEventListener('mousemove', e => {
+      const r = el.getBoundingClientRect();
+      qrx((((e.clientX - r.left) / r.width) - 0.5) * max);
+      qry(-(((e.clientY - r.top) / r.height) - 0.5) * max);
+    });
+    el.addEventListener('mouseleave', () => { qrx(0); qry(0); });
+  }
+  document.querySelectorAll('.g-tile').forEach(tile => {
+    addTilt(tile, 5);
+    const img = tile.querySelector('img');
+    if (!img || prefersReduced || !pointerFine) return;
+    tile.addEventListener('mouseenter', () => { gsap.to(tile, { y: -6, duration: 0.4, ease: 'power3.out' }); gsap.to(img, { scale: 1.06, duration: 0.5, ease: 'power3.out' }); });
+    tile.addEventListener('mouseleave', () => { gsap.to(tile, { y: 0, duration: 0.4, ease: 'power3.out' }); gsap.to(img, { scale: 1, duration: 0.5, ease: 'power3.out' }); });
+  });
+
+  /* ===== FONTS READY -> BUILD ALL SPLIT-TEXT / SCROLL ANIMATIONS ===== */
+  const fontsReady = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+  fontsReady.then(init).catch(init);
+
+  function init() {
+    const hasSplit = typeof SplitType !== 'undefined';
+
+    /* ---- Hero entrance timeline ---- */
+    let heroWords = null;
+    if (hasSplit) {
+      const heroSplit = new SplitType('#heroHeading', { types: 'lines,words', lineClass: 'split-line', wordClass: 'split-word' });
+      heroWords = heroSplit.words;
+      gsap.set(heroWords, { yPercent: 120, opacity: 0 });
+    }
+
+    function buildHeroTimeline() {
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      if (heroWords) tl.to(heroWords, { yPercent: 0, opacity: 1, duration: 0.9, stagger: 0.045 }, 0.35);
+      tl.fromTo('.hero-bg', { scale: 1.15, opacity: 0 }, { scale: 1.05, opacity: 1, duration: 1.3, ease: 'power2.out' }, 0)
+        .from('.badges .badge', { opacity: 0, y: 14, stagger: 0.08, duration: 0.6, clearProps: 'all' }, 0.3)
+        .from('.hero p.lead', { opacity: 0, y: 16, duration: 0.7, clearProps: 'all' }, 0.55)
+        .from('.hero .cta-row .btn', { opacity: 0, y: 16, stagger: 0.08, duration: 0.6, clearProps: 'all' }, 0.65)
+        .from('.hero .rating-line', { opacity: 0, y: 10, duration: 0.6, clearProps: 'all' }, 0.8);
+      return tl;
+    }
+
+    function startExperience() {
+      buildHeroTimeline();
+      if (!prefersReduced) {
+        gsap.to('.hero-bg', { scale: 1.12, duration: 9, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 1.3 });
+        // gentle parallax as hero scrolls away
+        gsap.to('.hero-bg', {
+          y: 60, ease: 'none',
+          scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
+        });
+      }
+      ScrollTrigger.refresh();
+    }
+
+    startExperience();
+
+    /* ---- Section headings: split into words, reveal on scroll ---- */
+    document.querySelectorAll('.section-head h2, .about h2, .final-cta h2').forEach(h => {
+      if (h.id === 'heroHeading') return;
+      let words = [h];
+      if (hasSplit) {
+        const s = new SplitType(h, { types: 'words', wordClass: 'split-word' });
+        words = s.words;
+        gsap.set(words, { opacity: 0, y: 24 });
+      } else {
+        gsap.set(words, { opacity: 0, y: 24 });
+      }
+      gsap.to(words, {
+        opacity: 1, y: 0, duration: 0.7, stagger: 0.035, ease: 'power3.out',
+        scrollTrigger: { trigger: h, start: 'top 88%' }
+      });
+    });
+
+    /* ---- Eyebrows + section paragraphs: fade up ---- */
+    document.querySelectorAll('.eyebrow, .section-head p').forEach(el => {
+      gsap.set(el, { opacity: 0, y: 16 });
+      gsap.to(el, {
+        opacity: 1, y: 0, duration: 0.6, ease: 'power2.out', clearProps: 'all',
+        scrollTrigger: { trigger: el, start: 'top 90%' }
+      });
+    });
+
+    /* ---- Card / tile groups: staggered fade + scale + blur ---- */
+    function revealGroup(selector, stagger) {
+      document.querySelectorAll(selector).forEach(group => {
+        const items = group.children;
+        gsap.set(items, { opacity: 0, y: 34, scale: 0.96, filter: 'blur(6px)' });
+        gsap.to(items, {
+          opacity: 1, y: 0, scale: 1, filter: 'blur(0px)',
+          duration: 0.8, stagger, ease: 'power3.out', clearProps: 'all',
+          scrollTrigger: { trigger: group, start: 'top 85%' }
+        });
+      });
+    }
+    revealGroup('.deals-grid', 0.12);
+    revealGroup('.testimonial-grid', 0.12);
+
+    // Gallery tiles: fade/scale on the tile, clip-path + scale reveal on the image
+    document.querySelectorAll('.gallery-grid').forEach(group => {
+      const tiles = group.children;
+      gsap.set(tiles, { opacity: 0, y: 34, scale: 0.96 });
+      gsap.to(tiles, {
+        opacity: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.08, ease: 'power3.out', clearProps: 'transform,opacity',
+        scrollTrigger: { trigger: group, start: 'top 85%' }
+      });
+    });
+    document.querySelectorAll('.g-tile img').forEach(img => {
+      gsap.set(img, { clipPath: 'inset(0% 0 100% 0)', scale: 1.15 });
+      gsap.to(img, {
+        clipPath: 'inset(0% 0 0% 0)', scale: 1, duration: 1, ease: 'power4.out', clearProps: 'clipPath',
+        scrollTrigger: { trigger: img, start: 'top 88%' }
+      });
+    });
+
+    // Initial menu panel reveal when the menu section scrolls into view
+    ScrollTrigger.create({
+      trigger: '#menu', start: 'top 80%', once: true,
+      onEnter: () => animateMenuGrid(document.querySelector('.menu-panel.active'))
+    });
+
+    /* ---- About section: image clip+scale reveal, text fade up ---- */
+    gsap.set('.about-visual img', { clipPath: 'inset(0% 0 100% 0)', scale: 1.12 });
+    gsap.to('.about-visual img', {
+      clipPath: 'inset(0% 0 0% 0)', scale: 1, duration: 1.1, ease: 'power4.out', clearProps: 'clipPath',
+      scrollTrigger: { trigger: '.about-visual', start: 'top 82%' }
+    });
+    gsap.set('.about', { opacity: 0, y: 24 });
+    gsap.to('.about', {
+      opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', clearProps: 'all',
+      scrollTrigger: { trigger: '.about', start: 'top 82%' }
+    });
+
+    /* ---- Subtle parallax depth on gallery + about photography ---- */
+    gsap.utils.toArray('.g-tile img').forEach((img, i) => {
+      gsap.to(img, {
+        y: i % 2 === 0 ? -18 : -8, ease: 'none',
+        scrollTrigger: { trigger: img.closest('.g-tile'), start: 'top bottom', end: 'bottom top', scrub: true }
+      });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
