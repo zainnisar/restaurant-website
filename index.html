@@ -105,13 +105,6 @@
     gap:10px;
     margin-bottom:16px;
   }
-  .eyebrow::before{
-    content:'';
-    width:22px; height:3px;
-    background:var(--orange);
-    border-radius:2px;
-    display:inline-block;
-  }
   :focus-visible{ outline:2px solid var(--orange); outline-offset:3px; }
 
   /* ---------- SCALLOP DIVIDER ---------- */
@@ -457,7 +450,7 @@
     font-size:clamp(28px, 4vw, 44px);
   }
   .final-cta p{ margin-top:12px; color:var(--cream-dim); }
-  .final-cta .cta-row{ justify-content:center; margin-top:30px; }
+  .final-cta .cta-row{ display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-top:30px; }
 
   footer{ border-top:1px solid var(--line); padding:46px 0 30px; background:var(--charcoal); }
   .foot-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:36px; }
@@ -498,7 +491,18 @@
   .split-line{ overflow:hidden; }
 
   @media (max-width:900px){
-    nav.links{ display:none; }
+    nav.links{
+      display:flex; flex-direction:column; gap:16px;
+      position:absolute; top:76px; left:0; right:0;
+      background:#FBF3E6; padding:20px 28px;
+      border-bottom:1px solid rgba(43,32,20,0.15);
+      opacity:0; visibility:hidden; transform:translateY(-8px);
+      transition:opacity .25s ease, transform .25s ease, visibility .25s ease;
+      pointer-events:none;
+    }
+    nav.links.nav-open{
+      opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto;
+    }
     .menu-toggle{ display:block; }
     .about-grid, .visit-grid{ grid-template-columns:1fr; }
     .about-visual{ order:-1; max-width:300px; margin:0 auto; }
@@ -509,6 +513,7 @@
     .foot-grid{ grid-template-columns:1fr; }
     .nav-cta{ display:none; }
     .mobile-order-fab{ display:inline-flex; }
+    .hero .rating-line{ flex-direction:column; gap:8px; text-align:center; }
   }
 </style>
 </head>
@@ -912,11 +917,20 @@
   /* ===== MOBILE MENU ===== */
   const toggle = document.querySelector('.menu-toggle');
   const links  = document.querySelector('nav.links');
-  toggle?.addEventListener('click', () => {
-    const open = links.style.display === 'flex';
-    links.style.display = open ? 'none' : 'flex';
-    links.style.cssText += open ? '' : 'position:absolute; top:76px; left:0; right:0; background:#FBF3E6; flex-direction:column; padding:20px 28px; border-bottom:1px solid rgba(43,32,20,0.15); gap:16px;';
-    toggle.setAttribute('aria-expanded', String(!open));
+  function closeMobileMenu() {
+    links?.classList.remove('nav-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+  }
+  toggle?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = links.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  links?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
+  document.addEventListener('click', (e) => {
+    if (!links?.classList.contains('nav-open')) return;
+    if (links.contains(e.target) || toggle.contains(e.target)) return;
+    closeMobileMenu();
   });
 
   /* ===== MOBILE FLOATING ORDER BUTTON: show only after hero scrolls out of view ===== */
