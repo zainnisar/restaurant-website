@@ -32,6 +32,11 @@ guildford-mina-pizzeria-website/
 └── README.md
 ```
 
+## Known Limitations
+
+- The Google review snapshot was pulled at a point in time — refresh periodically so ratings/counts stay accurate
+- No contact form or newsletter signup — phone, click-to-call, and the NextOrder link are the only conversion paths by design
+
 ## License / Ownership
 
 All content (copy, photos, business information) belongs to Guildford Mina Pizzeria. This repository contains the website source only — it is not licensed for reuse as a template without permission.
