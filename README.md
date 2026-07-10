@@ -20,21 +20,24 @@ A single-page website for **Guildford Mina Pizzeria**, 316 Railway Terrace, Guil
 
 - Full menu with tabbed categories (Pizza, Lebanese/Manoush, BBQ Kaak, Burgers, Dessert Pizza, Drinks)
 - Special deals section
-- Photo gallery of real dishes and the shop interior
+- Auto-playing photo gallery slideshow with wipe transitions, arrow/dot controls, real dishes and the shop interior
 - About section
 - Real, attributed Google reviews
 - Visit/location section with embedded Google Map and opening hours
-- Sticky header with mobile hamburger menu
+- Sticky header with animated mobile dropdown menu, plus a floating "Order Now" button on mobile
 - Animated scroll reveals, parallax, magnetic buttons, animated stat counters
 - Fully responsive (mobile breakpoint at 900px)
 - Respects `prefers-reduced-motion`
 - Real ordering link (NextOrder) and click-to-call phone number
+- Privacy policy page
+- SRI-verified CDN scripts and ARIA-labelled menu tabs for better security and accessibility
 
 ## File Structure
 
 ```
 guildford-mina-pizzeria-website/
 ├── index.html          # the entire site — markup, CSS, and JS
+├── privacy-policy.html
 ├── images/
 ├── robots.txt
 ├── sitemap.xml
