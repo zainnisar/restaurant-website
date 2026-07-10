@@ -8,11 +8,7 @@
 
 A single-page website for **Guildford Mina Pizzeria**, 316 Railway Terrace, Guildford NSW 2161 — open 24 hours, 7 days a week. Static HTML/CSS/JS (no build step, no framework), with GSAP + Lenis for scroll animations and smooth scrolling.
 
-<!--
-  TODO: add a screenshot or short GIF of the site here, e.g.:
-  ![Site preview](images/preview.gif)
-  A screen recording of the hero entrance + scroll reveals will sell this repo far better than any text description.
--->
+![Site preview](images/preview.png)
 
 ---
 
