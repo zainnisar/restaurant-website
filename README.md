@@ -36,13 +36,13 @@ A single-page website for **Guildford Mina Pizzeria**, 316 Railway Terrace, Guil
 
 ```
 guildford-mina-pizzeria-website/
-├── index.html          # the entire site — markup, CSS, and JS
-├── privacy-policy.html
-├── images/
-├── robots.txt
-├── sitemap.xml
-├── .gitignore
-└── README.md
+├── index.html            # main site: markup, styles and scripts
+├── privacy-policy.html   # privacy policy page
+├── images/               # photos, hero banner and logo
+├── robots.txt            # search engine crawl rules
+├── sitemap.xml           # sitemap for search engines
+├── .gitignore            # files excluded from version control
+└── README.md             # project documentation
 ```
 
 ## Known Limitations
